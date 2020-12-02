@@ -83,7 +83,7 @@ export default class Main extends Component {
     return (
       <SafeAreaView style={styles.mainContainer}>
         <View style={styles.inputContainer}>
-          <Text style={styles.countryHeading}>{'Write Counrty name:'}</Text>
+          <Text style={styles.countryHeading}>{'Write country name:'}</Text>
           <TextInput style={styles.input}
             onChangeText={(text) => this.setState({ name: text })}
             placeholder={"Enter Search Term"} />
