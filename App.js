@@ -70,9 +70,6 @@ export default class Main extends Component {
       this.fetchDataApi()
     } else {
       Alert.alert('Please enter name')
-
-
-
     }
 
   }
@@ -86,7 +83,7 @@ export default class Main extends Component {
           <Text style={styles.countryHeading}>{'Write country name:'}</Text>
           <TextInput style={styles.input}
             onChangeText={(text) => this.setState({ name: text })}
-            placeholder={"Enter Search Term"} />
+            placeholder={"Enter text here "} />
         </View>
         <RoundButton style={styles.actionBtn} text={'Submit'.toUpperCase()}
           onPress={this._onNext} />
@@ -102,7 +99,7 @@ export default class Main extends Component {
               {this.renderItem('Total Covid 19 cases', data.cases)}
               {this.renderItem('Total Covid 19 deaths', data.deaths)}
               {this.renderItem('Total Covid 19 patients recovered', data.recovered)}
-              {/* {this.renderItem('Infectionrate', 'Sweden')} */}
+              {this.renderItem('Infectionrate', data.infectionRate +' %')}
               {this.renderLine()}
             </View>
             : null}
